@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center_horizontal"
+    android:scrollbarStyle="outsideOverlay"
+    android:paddingBottom="7dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="10dp"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/tvpNombre"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="2dp"
+        android:inputType="textMultiLine"
+        android:gravity="center"
+        android:elegantTextHeight="true"
+        android:textAlignment="center" />
+
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="94dp"
+        android:visibility="gone"
+        android:id="@+id/tlProductoYaSeleccionado"
+        android:background="@drawable/et_bottom_bg">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Producto ya seleccionado"
+            android:id="@+id/tvpSiEstaEnLista"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="2dp"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cantidad:"
+                android:id="@+id/tvpCantidadYaExiste"
+                android:layout_span="1"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio:"
+                android:id="@+id/tvpPrecioYaExiste"
+                android:layout_span="1"
+                android:gravity="center|center_horizontal|fill_vertical" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:id="@+id/tvpTotalYaExiste"
+                android:layout_span="1"
+                android:gravity="center" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvpCantidadYaSeleccionado"
+                android:layout_span="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvpPrecioYaSeleccionado"
+                android:layout_span="1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvpTotalYaSeleccionado"
+                android:layout_span="1"
+                android:gravity="center" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tvpMarca"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="2dp"
+        android:gravity="center" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="IVA %"
+                android:id="@+id/tvpI"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpIva"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Precios"
+                android:id="@+id/tvpPrecios"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpPrecio1"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpPrecio2"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpPrecio3"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpPrecio4"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Unidad"
+                android:id="@+id/tvpU"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpUnidad"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Peso"
+                android:id="@+id/tvpP"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpPeso"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Existencia"
+                android:id="@+id/tvpE"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/tvpExistencia"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:gravity="center|left" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Producto Destacado"
+                android:id="@+id/tvpDestacado"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <CheckBox
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/chkDestacado"
+                android:layout_span="0"
+                android:gravity="center" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tvpActualizacion"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="2dp"
+        android:gravity="center" />
+</LinearLayout>
+
+
+</ScrollView>

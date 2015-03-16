@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Servidor">
+        <EditTextPreference android:key="SERVER"
+            android:title="IP Servidor"
+            android:summary="IP o nombre del servidor"
+            android:dialogTitle="Servidor"
+            android:defaultValue="192.168.1.8"/>
+        <EditTextPreference android:key="SUBDOMAIN"
+            android:title="Subdominio"
+            android:summary="Subdominio en el servidor"
+            android:dialogTitle="Subdominio"
+            android:defaultValue="mayorga"/>
+        <EditTextPreference android:key="PORT"
+            android:title="# Puerto"
+            android:summary="Número de puerto (Def:80)"
+            android:dialogTitle="Puerto"
+            android:numeric="integer"
+            android:defaultValue="80"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="REST Service">
+        <CheckBoxPreference android:key="REST_AUTH"
+            android:title="Autentificación"
+            android:summary="El servicio requiere autentificación?"
+            android:defaultValue="false"/>
+        <EditTextPreference android:key="USER"
+            android:title="Usuario REST"
+            android:summary="Usuario para acceder a servicio"
+            android:dialogTitle="Usuario"
+            android:defaultValue="admin"/>
+        <EditTextPreference android:key="PASS"
+            android:title="Password REST"
+            android:summary="Password para acceder a servicio)"
+            android:dialogTitle="Password"
+            android:password="true"
+            android:defaultValue="1234"/>
+        <EditTextPreference android:key="REST_RESPONSE"
+            android:title="Formato Response"
+            android:summary="Formato de respuesta desd REST"
+            android:dialogTitle="Format Response"
+            android:defaultValue="json"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Sincronización">
+        <EditTextPreference android:key="TIMEOUTCONNECTION"
+            android:title="Tiempo de conexión"
+            android:summary="Tiempo de espera para conexión con WEBSERVICE"
+            android:dialogTitle="Tiempo de conexión"
+            android:inputType="number"
+            android:defaultValue="10000"/>
+        <EditTextPreference android:key="SETSOTIMEOUT"
+            android:title="Tiempo de espera por datos"
+            android:summary="Tiempo de espera para descargar datos dese WEBSERVICE"
+            android:dialogTitle="Tiempo de espera por datos"
+            android:inputType="number"
+            android:defaultValue="10000"/>
+        <CheckBoxPreference android:key="SINC_ENABLED"
+            android:title="Sincronización"
+            android:summary="Habilitar o desahibilitar sincronización"
+            android:defaultValue="false"/>
+        <EditTextPreference android:key="SINC_INTERVAL"
+            android:title="Intervalo de Sincronización"
+            android:summary="Intervalo de Sincronización(minutos)"
+            android:dialogTitle="Intervalo"
+            android:defaultValue="1"/>
+        <PreferenceScreen
+            android:key="PrefScreen"
+            android:title="TESTING"
+            android:summary="Es una sub preferencia">
+            <intent android:action="android.intent.action.VIEW"
+                android:targetPackage="apps.dexnu.planning"
+                android:targetClass="apps.dexnu.planning.Preferencias" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Generales">
+        <EditTextPreference android:key="SUCURSAL"
+            android:title="Sucursal"
+            android:summary="Sucursal a la que pertenece el dispositivo"
+            android:dialogTitle="Sucursal"
+            android:inputType="number"
+            android:defaultValue="1"/>
+    </PreferenceCategory>
+</PreferenceScreen>

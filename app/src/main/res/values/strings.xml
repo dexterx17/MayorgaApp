@@ -1,6 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mayorga</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Pedidos APP</string>
+    <string name="hello_world">Welcome to HELL!</string>
+    <string name="action_settings">Configuraciones</string>
+    <string-array name="menu_drawer_items">
+        <item>Proyectos</item>
+        <item>Contáctos</item>
+        <item>Crear actividad</item>
+    </string-array>
+    <string name="nuevo">Nuevo</string>
+    <string name="guardar">Guardar</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="sincronizar_pull">Sincronizar (PULL)</string>
+    <string name="sincronizar_push">Sincronizar (PUSH)</string>
+    <string name="sincronizartiposid">Sincronizar tipos de identificación</string>
+    <string name="sincronizartiposcliente">Sincronizar tipos de cliente</string>
+    <string name="sincronizarcategoriasprod">Sincronizar categorias</string>
+    <string name="sincronizartiposprod">Sincronizar tipos de producto</string>
+    <string name="drawer_open">Abrir menu</string>
+    <string name="drawer_close">Cerrar menu</string>
+    <string name="tipoid">Tipo de Identificación</string>
+    <string name="tipocliente">Tipo de Cliente</string>
+    <style name="DefaultButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#979797</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#f9f9f9</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <string name="menu_buscar">Buscar</string>
+    <string name="definir_cliente">Definir Cliente</string>
+    <string name="agregar_productos">Agregar Productos</string>
+    <string name="fin_select_productos">Finlizar</string>
+    <string name="add_producto">Agregar</string>
+    <string name="add_producto_ok">Ok</string>
+    <string name="add_pedido_ok">Guardar</string>
+    <string name="list_productos">Lista Productos</string>
+    <string name="list_users">Lista Usuarios</string>
+    <string name="guardar_pedido">Guardar Pedido</string>
+    <string name="cancelar_pedido">Cancelar Pedido</string>
+    <string name="fin_editar_productos">Editar Producto</string>
+    <string name="edit_pedido">Editar Pedido</string>
+
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="error_config">Por favor establezca la constante %1$s y recompile la app.</string>
+    <string name="already_registered">El dispositivo ya se encuentra registrado en el servidor.</string>
+    <string name="gcm_registered">Desde GCM: dispositivo registrado correctamente!</string>
+    <string name="gcm_unregistered">Desde GCM: dispositivo removido correctamente!</string>
+    <string name="gcm_message">Desde GCM: tienes mensajes!</string>
+    <string name="gcm_error">Desde GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">Desde GCM: Recuperable error (%1$s).</string>
+    <string name="gcm_deleted">Desde GCM: servidor eliminado %1$d mensajes pendientes!</string>
+    <string name="server_registering">Intentanto (intento %1$d/%2$d) registrar en el servidor.</string>
+    <string name="server_registered">Desde Demo Server: dispositivo agregado correctamente!</string>
+    <string name="server_unregistered">Desde Demo Server: dispositivo removido correctamente!</string>
+    <string name="server_register_error">No se logro registrar el dispositivo en el servidor DEMO luego de %1$d intentos.</string>
+    <string name="server_unregister_error">No se logro remover el dispositivo desde el servidor DEMO.</string>
+    <string name="options_register">Registrar</string>
+    <string name="options_unregister">Unregistrar</string>
+    <string name="options_clear">Limpiar</string>
+    <string name="options_exit">Salir</string>
+    <string name="send">Enviar</string>
+    <string name="clear">Limpiar</string>
+    <string name="conexion_a_internet">Conexión a Internet</string>
+    <string name="conexion_a_servidor">Conexión a Servidor</string>
+
 </resources>

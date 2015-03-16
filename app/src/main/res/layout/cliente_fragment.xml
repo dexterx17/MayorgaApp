@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:layout_gravity="center_horizontal"
+    android:scrollbarStyle="outsideOverlay"
+    android:paddingBottom="7dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="10dp">
+    >
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/etcSucursal"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/etcCodigo"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/etcVendedor"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="13"
+            android:hint="RUC / CI "
+            android:id="@+id/etcRUCCI"
+            android:numeric="integer" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:id="@+id/spcIdentificacion"
+            android:prompt="@string/tipoid"
+            android:layout_gravity="center_horizontal" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            android:id="@+id/spcTipo"
+            android:prompt="@string/tipocliente"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcEmpresa"
+            android:maxLength="250"
+            android:hint="Empresa "
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcRepresentante"
+            android:inputType="textPersonName"
+            android:hint="Representante"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcCiudad"
+            android:hint="Ciudad"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcDireccion1"
+            android:inputType="textMultiLine"
+            android:hint="Dirección 1"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcDireccion2"
+            android:hint="Dirección 2"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etcTelfax1"
+            android:inputType="phone"
+            android:hint="TelFax"
+            android:layout_gravity="center_horizontal"
+            android:numeric="integer" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telfax2"
+            android:inputType="phone"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/etcTelfax2"
+            android:numeric="integer" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Propietario"
+            android:inputType="textPersonName"
+            android:id="@+id/etcPropietario" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empresa pública"
+            android:id="@+id/chbcEmpPublica"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>

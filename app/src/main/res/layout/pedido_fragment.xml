@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="7dp"
+    android:paddingLeft="9dp"
+    android:paddingRight="9dp"
+    android:paddingTop="10dp"
+    android:weightSum="1"
+    android:id="@+id/lyPedidoFragmenContent">
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="apps.denux.mayorga.controladores.PedidoFragmentMaestro"
+        android:id="@+id/fragmentMestro"
+        android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1.02">
+    <FrameLayout
+        android:id="@+id/frame_content_detalle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

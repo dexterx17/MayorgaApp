@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/mi_sync_productos"
+        app:showAsAction="never|withText"
+        android:icon="@drawable/ic_sync"
+        android:orderInCategory="100"
+        android:title="@string/sincronizar" />
+    <item
+        android:id="@+id/menu_buscar"
+        android:title="@string/menu_buscar"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        />
+
+    <item android:id="@+id/menu_finalizar_select_producto"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_finalizar_seleccion_productos"
+        android:orderInCategory="100"
+        android:title="@string/fin_select_productos" />
+
+</menu>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+        <TableRow>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etRuc"
+                            android:maxLength="250"
+                            android:hint="Ruc"
+                            android:layout_gravity="center_horizontal"
+                            android:focusable="false"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etEmpresa"
+                            android:maxLength="250"
+                            android:hint="Empresa "
+                            android:layout_gravity="center_horizontal"
+                            android:focusable="false"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etFecha"
+                            android:maxLength="250"
+                            android:hint="Fecha"
+                            android:layout_gravity="center_horizontal"
+                            android:focusable="false"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/etObservacion"
+                            android:maxLength="250"
+                            android:hint="Observación"
+                            android:layout_gravity="center_horizontal"
+                            android:focusable="false"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <!-- tableRow0 -->
+                        <TableRow android:layout_height="wrap_content"
+                            android:layout_width="fill_parent"
+                            android:id="@+id/tableRow0">
+                            <TextView android:id="@+id/TextView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sub - Total"
+                                android:gravity="right" android:paddingRight="5dp"></TextView>
+
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etSTotal"
+                                android:hint="0.0"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_weight="2"
+                                android:focusable="false"
+                                />
+
+                        </TableRow>
+
+                        <!-- tableRow1 -->
+                        <TableRow android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:id="@+id/tableRow2">
+                            <TextView android:id="@+id/TextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Descuento"
+                                android:gravity="right" android:paddingRight="5dp"></TextView>
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etDescuento"
+                                android:hint="0.0"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_weight="2"
+                                android:focusable="false"/>
+
+                        </TableRow>
+
+
+                        <!-- tableRow2 -->
+                        <TableRow android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:id="@+id/tableRow4">
+                            <TextView android:id="@+id/TextView3"
+                                android:layout_width="wrap_content" android:text="Iva"
+                                android:paddingRight="5dp"
+                                android:gravity="right|center_vertical"
+                                android:layout_height="wrap_content" android:paddingBottom="5dp"
+                                android:focusable="false"></TextView>
+
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etIva"
+                                android:hint="0.0"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_weight="2"
+                                android:focusable="false"/>
+                        </TableRow>
+
+                        <!-- tableRow3 -->
+                        <TableRow android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:id="@+id/tableRow5">
+
+                            <TextView android:id="@+id/TextView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:text="Total"
+                                android:gravity="center_vertical|right"
+                                android:paddingRight="5dp"></TextView>
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/etTotal"
+                                android:hint="0.0"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:layout_weight="2"
+                                android:focusable="false"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </TableRow>
+
+
+
+
+
+</TableLayout>

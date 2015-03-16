@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView android:id="@+id/cCod"
+        android:text="row_id"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:width="50dip"
+        android:gravity="center" />
+    <TextView android:id="@+id/cProducto"
+        android:text="col_1"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:width="150dip"
+        />
+    <TextView android:id="@+id/cPrecio"
+        android:text="col_2"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:width="60dip"
+        android:gravity="center" />
+    <TextView android:id="@+id/cIva"
+        android:text="col_3"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:width="60dip"
+        android:gravity="center" />
+    <TextView android:id="@+id/cCantidad"
+        android:text="col_4"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:width="60dip"
+        android:gravity="center" />
+    <TextView android:id="@+id/cTotal"
+        android:text="col_5"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:width="60dip"
+        android:gravity="center" />
+</LinearLayout>
