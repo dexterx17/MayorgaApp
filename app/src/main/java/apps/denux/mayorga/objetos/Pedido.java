@@ -174,4 +174,23 @@ public class Pedido extends Objeto{
         return pedido;
     }
 
+    public JSONObject getJSON(){
+        JSONObject object = new JSONObject();
+        try {
+            object.put("CODIGO",this.COD_PEDIDO);
+            object.put("DISPOSITIVO", this.DISPOSITIVO);
+            object.put("FECHA", this.FECHA);
+            object.put("CLIENTE", this.Empresa);
+            object.put("VENDEDOR", this.VENDEDOR);
+            object.put("RUTA", this.RUTA);
+            object.put("LONGITUD", this.LONG);
+            object.put("LATITUD", this.LAT);
+            object.put("LOCK", this.LOCK);
+            object.put("ACTUALIZACION", this.F_UPDATE);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return object;
+    }
 }

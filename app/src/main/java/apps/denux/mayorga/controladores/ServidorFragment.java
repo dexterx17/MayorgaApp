@@ -33,6 +33,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import apps.denux.mayorga.Constantes;
 import apps.denux.mayorga.R;
 import apps.denux.mayorga.Utiles;
+import apps.denux.mayorga.helpers.EventosHelper;
 import apps.denux.mayorga.helpers.RESTHelper;
 import apps.denux.mayorga.helpers.SyncHelper;
 import apps.denux.mayorga.modelos.ClientesDB;
@@ -70,6 +71,7 @@ public class ServidorFragment extends Fragment implements View.OnClickListener {
     Button btnRegistrar;
     Button btnUnregistrar;
     Button btnSincronizar;
+    Button btnSincronizarPush;
     Button btnConexionInternet;
     Button btnConexionServer;
     CheckBox chbInternet;
@@ -94,6 +96,7 @@ public class ServidorFragment extends Fragment implements View.OnClickListener {
         btnRegistrar = (Button) vista.findViewById(R.id.btnRegistrarGCM);
         btnUnregistrar = (Button) vista.findViewById(R.id.btnUnregistrarGCM);
         btnSincronizar = (Button) vista.findViewById(R.id.btnSincronizarTodo);
+        btnSincronizarPush = (Button) vista.findViewById(R.id.btnSincronizarPush);
         btnConexionInternet = (Button) vista.findViewById(R.id.btnConexionInternet);
         btnConexionServer = (Button) vista.findViewById(R.id.btnConexionServidor);
         chbInternet = (CheckBox) vista.findViewById(R.id.chbConexionInternet);
@@ -105,6 +108,7 @@ public class ServidorFragment extends Fragment implements View.OnClickListener {
         btnUnregistrar.setOnClickListener(this);
         btnConexionServer.setOnClickListener(this);
         btnSincronizar.setOnClickListener(this);
+        btnSincronizarPush.setOnClickListener(this);
 
         if(verificiarConexionInternet())
             verificarConexionServer();
@@ -165,59 +169,14 @@ public class ServidorFragment extends Fragment implements View.OnClickListener {
         try {
             eventosDB.open();
             eventos = eventosDB.getList();
-            eventosDB.close();
-            RESTHelper restHelper = new RESTHelper();
-            for (int i = 0; i < eventos.size(); i++) {
-                Evento event = eventos.get(i);
-                Log.i("EVENTO",""+event.CODIGO_OBJETO+"/"+event.OBJETO+"/"+event.OPERACION);
-                switch (event.OBJETO) {
-                    case "Cliente":
-                        ClientesDB clientesDB = new ClientesDB(getActivity());
-                        clientesDB.open();
-                        Cliente cliente =clientesDB.get(event.CODIGO_OBJETO);
-                        clientesDB.close();
-                        boolean resultado = false;
-                        try {
-                            resultado = restHelper.post(Constantes.URL_POST_CLIENTE,"",cliente.getJSON());
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                            mDisplay.append("Error al acceder al Servidor, verifique conectividad");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        Log.i("NOTI:cliente", "evento borrado"+resultado );
-                        if(resultado){
-                            eventosDB.open();
-                            boolean res= eventosDB.delete(event.CODIGO);
-                            eventosDB.close();
-                            if(res){
-                                //Nose si notificar al usuario de que ya todo bien
-                                Log.i("NOT:cliente", "evento borrado" );
-                            }
-                        }
-                        break;
-                    case "Pedido":
-                        PedidoDB pedidoDB = new PedidoDB(getActivity());
-                        pedidoDB.open();
-                        Pedido pedido = pedidoDB.get(event.CODIGO_OBJETO);
-                        pedidoDB.close();
-                        PedidoItemDB pedidoItemDB = new PedidoItemDB(getActivity());
-                        pedidoItemDB.open();
-                        Cursor cursor = pedidoItemDB.get(Integer.valueOf(event.CODIGO_OBJETO));
-                        PedidoItem pedidoItem = new PedidoItem();//pedidoItemDB.get(event.CODIGO_OBJETO);
-                        //String result = restHelper.post(Constantes.URL_POST_CLIENTE,"",pedido.getJSON());
-                        //Log.i("PEDIDOREST:post","R=>"+result);
-                       // Log.i("PEDIDO REST:post", "R=> " + pedido.getJSON());
-                        while (cursor.moveToNext()){
-                            Log.i("PEDIDO_ITEM REST:post", "R=> " + pedidoItem.getJSON2(cursor));
-                        }
-                        //Log.i("PEDIDO_ITEM REST:post", "R=> " + pedidoItem.getJSON2(cursor));
-                        pedidoItemDB.close();
-                        break;
-                }
-            }
+            EventosHelper restHelper = new EventosHelper(getActivity());
+            restHelper.execute(eventos);
+
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        finally {
+            eventosDB.close();
         }
     }
     /**
